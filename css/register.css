@@ -1,0 +1,23 @@
+body, html{
+width: 100%;
+height: 100%;
+margin:0;
+padding:0;
+}
+#a{position:relative;width:100%;height:100%;min-width: 950px;min-height: 445px;background:url(https://img2s.trendiano.com/rs/common/images/login/login_trendiano.jpg);}
+.a{width:413px;height:341px;background:white;position:absolute;left:58%;top:25%;}
+h4{margin-left:30px;}
+
+input{margin-left:30px;width:349px;height:25px;margin-bottom:15px;}
+.b a{line-height:32px;text-align:center;display:block;color:#e64064;text-decoration:none;cursor:pointer;}
+.c a{line-height:32px;text-align:center;display:block;color:#e64064;text-decoration:none;cursor:pointer;}
+p{margin-top:-2px;margin-bottom:-5px;}
+.yz{width:184px;height:26px;}
+.yzm{width:88px;height:29px;margin-left:-4px;background:#cfcdfe;color:blue;text-align:center;cursor:pointer;border:none;/*后面代码是隐藏文本框里的光标*/color: transparent;text-shadow: 0 0 0 #000;}
+#register{width:350px;height:26px;background:#e64064;color:white;margin-left:30px;border:none;}
+
+.fn{float:right;margin-right:30px;}
+.a>a{font-size:12px;text-decoration:none;margin-top:10px;}
+
+.sj{width:184px;height:26px;}
+.sjyzm{width:109px;height:29px;margin-left:-4px;background:#e64064;color:white;text-align:center;cursor:pointer;border:none;color: transparent;text-shadow: 0 0 0 #000;}

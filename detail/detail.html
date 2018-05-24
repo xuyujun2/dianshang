@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/style.css">
+	<style>
+			body,h1,h3,h4,h2,h5,h6,ul,ol,p,fieldset,dd,dl,input,textarea,option,hr,td{margin:0;padding:0;}
+			a{text-decoration:none;color:black;}
+			span,p{font-size:12px;}
+			h1,h3,h4,h2,h5,h6,b,strong{font-weight:normal;}
+			i,em{font-style:normal;}
+			img{border:none;}
+			a,input{outline:none;}
+
+			#header{width:100%;height:136px;position:absolute;top:0;left:0;background:black;}
+			#header .a{width:1178px;height:34px;position:absolute;left:0;right:0;bottom:0;top:0;margin:0 auto; }
+			#header .a ul{position:absolute;right:0;top:0;width:340px;height:34px;}
+			#header .a li{float:left;list-style:none;padding:0 10px;margin-top:8px;border-right:1px gray solid;}
+			#header .a li span{color:gray;float:left;}
+			#header .a img{margin-right:4px;float:left;margin-top:4px;}
+			#header h1 a{color:white;width:197px;height:28px;position:absolute;left:0;right:0;bottom:0;top:0;margin:34px auto;}
+			#header .b{width:1178px;height:30px;position:absolute;left:0;right:0;bottom:0;top:0;margin:62px auto;}
+			#header form{position:absolute;right:0;top:0px;}
+			#header .input1{width:190px;height:30px;float:left;border:0;border-bottom:1px solid gray;background:black;color:gray;}
+			#header .input2{margin-top:12px;margin-left:3px;float:left;}
+		    #header .c{width:1178px;height:30px;position:absolute;left:0;right:0;bottom:0;top:0;margin:105px auto;}
+		    #header .c ul{list-style:none;width:874px;height:42px;float:left;}
+		    #header .c li{float:left;padding-right:34px;}
+		    #header .c li span{color:white;}
+		    #header .c .time{float:right;color:white;margin-top:3px;}
+		    #header a:hover span{color:#b76712;}
+
+		    #header1{width:100%;height:220px;position:absolute;left;top:124px;background:black;opacity:0.8;z-index:2;display:none;}
+		    #header1 .a{width:1178px;height:60px;border-bottom:1px solid gray;position:absolute;left:0;right:0;bottom:0;top:0;margin:0 auto;}
+		    #header1 .a h3{color:gray;margin-top:27px;}
+		    #header1 .b{width:1178px;height:155px;position:absolute;left:0;right:0;bottom:0;top:0;margin:85px auto;}
+		    #header1 .ul1{list-style:none;float:left;margin-right:84px;}
+		    #header1 .ul1 li{margin-bottom:10px;}
+		    #header1 .ul1 span{color:white;}
+		    #header1 .ul2{list-style:none;float:left;}
+		    #header1 .ul2 li{margin-bottom:10px;}
+		    #header1 .ul2 span{color:white;}
+
+            #tiao{width:100%;height:38px;position:absolute;top:136px;left:0;background:#313131;}
+            .tiao{width:1178px;height:38px;position:absolute;top:0;left:0;right:0;bottom:0;margin:0 auto;}	
+            .tiao img{margin-left:88px;margin-top:15px;}
+            .tiao span{color:#999999;}	
+
+            #main{width:100%;height:1039px;position:absolute;left:0;top:174px;background:white;}
+            #main #container{width:1178px;height:1039px;position:absolute;top:0;left:0;right:0;bottom:0;margin:0 auto;}
+            #container .container1{}
+            #container .container1 .left{width:590px;height:650px;}   
+            /*.container1 .left img{margin-left:103px;}*/
+
+            #container .container1 .right{width:594px;height:651px;position:absolute;left:583px;top:0;}
+            .container1 .right>h3{margin-left:162px;margin-top:100px;margin-bottom:15px;}
+            .container1 .right .a{margin-left:162px;width:291px;height:22px;margin-bottom:15px;}
+            .container1 .right .a h3{float:left;}
+            .container1 .right .a span{float:left;line-height:22px;margin-left:10px;}
+            .container1 .right .p1{margin-left:162px;font-size:17px;color:red;margin-bottom:15px;}
+            .container1 .right .p2{margin-left:162px;width:65px;height:28px;font-size:13px;}
+            .container1 .right .p2 .span1{float:left;margin-top:5px;}
+            .container1 .right .p2 .span2{width:25px;height:25px;background:black;float:right;margin-right:5px;}
+            .container1 .right .p3{width:255px;height:22px;margin-left:162px;margin-top:20px;}
+            
+            .container1 .right .p3 span{margin-right:4px;float:left;font-size:14px;width:25px;height:20px;line-height:20px;text-align:center;}
+            .container1 .right .p3 .span{width:35px;}
+            .container1 .right .p3 span:hover{background:black;color:white;}
+            .container1 .right .p3 .span:hover{background:none;color:black;}
+            .container1 .right .p3 img{float:left;margin-top:4px;margin-left:5px;}
+            .container1 .right .p3 span,img{cursor:pointer;}
+            .container1 .right .p4{margin-left:162px;margin-top:20px;width:292px;height:22px;}
+            .container1 .p4 a{float:left;}
+            .container1 .p4 .a2{margin-right:20px;}
+            .container1 .p4 a span{float:left;margin-right:12px;font-size:13px;}
+            .container1 .p4 a img{float:left;margin-right:12px;}
+            .container1 .p4 .a2 .img1{margin-top:-4px;}
+            .container1 .p5{margin-left:162px;margin-top:10px;}
+            .container1 .p5 span{text-decoration:underline;}
+            .container1 .right button{width:427px;height:43px;margin-left:162px;background:none;margin-top:15px;border:none;border:2px solid black;}
+            .container1 .p6{width:105px;height:24px;margin-left:483px;margin-top:15px;}
+            .container1 .p6 span{float:left;width:32px;height:28px;}
+            .container1 .p6 a{float:left;margin-right:10px;}
+
+            #container .container2{width:1178px;height:392px;position:absolute;top:600px;left:0;}
+            #container .container2 .left{width:589px;height:392px;position:absolute;top:0px;left:0;}
+            #container .container2 .left .p1{margin-left:122px;margin-top:46px;width:309px;height:15px;}
+            #container .container2 .left .p1 .span1{margin-right:70px;}
+            #container .container2 .left .p2{margin-left:122px;margin-top:12px;width:452px;height:90px;}
+            #container .container2 .left .p2 .span1{margin-right:70px;float:left;}
+            #container .container2 .left .p2 .span2{width:354px;height:102px;float:left;}
+
+            #container .container2 .left .p3{margin-left:122px;margin-top:12px;width:456px;height:12px;}
+            #container .container2 .left .p3 .span1{margin-right:41px;float:left;width:49px;line-height:20px;}
+            #container .container2 .left .p3 .span2{width:364px;height:12px;float:left;}
+
+            #container .container2 .right{width:589px;height:392px;position:absolute;left:589px;top:0;}
+            .container2 .right .p1{margin-top:46px;margin-left:42px;}
+            .container2 .right .p1 .span1{margin-right:44px;}
+
+            .container2 .right .p2{margin-top:12px;margin-left:42px;}
+            .container2 .right .p2 .span1{margin-right:68px;}
+
+            .container2 .right .p3{margin-top:12px;margin-left:42px;}
+            .container2 .right .p3 .span1{margin-right:68px;}
+
+            .container2 .right .p4{margin-top:12px;margin-left:42px;}
+            .container2 .right .p4 .span1{margin-right:68px;float:left;}
+            .container2 .right .p4 .span2{float:left;width:440px;height:165px;}
+            .container2 .right .p4 .span2 li{list-style:none;float:left;margin-right:39px;width:49px;height:66px;}
+            .container2 .right .p4 .span2 .li7 img{height:56px;}
+            .container2 .right .p5{width:117px;height:64px;margin-left:132px;line-height:20px;}
+            
+		    #link{width:100%;height:356px;position:absolute;background:#1a1a1a;left:0;top:1200px;}
+		    #link .link{width:1178px;height:356px;position:absolute;left:0;right:0;bottom:0;top:0;margin:0 auto;}
+		    .link .ul1{width:260px;height:318px;border-right:1px solid white;float:left;margin-top:20px;list-style:none;}
+		    .link ul h4{margin-bottom:16px;margin-top:5px;} 
+		    .link ul h4 span{color:white;} 
+		    .link .ul2{width:314px;height:318px;border-right:1px solid white;float:left;margin-top:20px;list-style:none;}
+		    .link .ul2 .li1{margin-left:70px;margin-top:5px;}
+		    .link .ul2 .li2{margin-left:70px;margin-top:5px;}
+		    .link .ul2 .li2>span{float:left;color:white;}
+		    .link .ul2 .li2 a{float:left;margin-top:32px;margin-left:-50px;}
+		    .link .ul2 .li1 img{margin-left:-12px;}
+		    .link .ul2 .li2 a img{margin-top:0px;float:left;}
+		    .link .ul2 .li2 a span{float:left;color:gray;}
+		    .link .ul3{width:342px;height:318px;border-right:1px solid white;float:left;margin-top:20px;list-style:none;}
+		    .link .ul3 span{float:left;margin-top:5px;margin-left:70px;color:white;}
+		    .link .ul3 img{float:left;margin-top:30px;margin-left:-47px;}
+		    .link .ul4{width:258px;height:318px;float:left;margin-top:20px;list-style:none;}
+		    .link .ul4 li{margin-left:70px;width:128px;}
+		    .link .ul4 .li1 span{color:white;}
+		    .link .ul4 .li2{margin-right:15px;margin-top:18px;margin-bottom:18px;}
+		    .link .ul4 .li2 span{margin-right:15px;color:gray;}
+
+		    .link .ul4 .li3 span{float:left;color:gray;}
+		    .link .ul4 .li3 img{margin-right:14px;margin-top:0px;float:left;}
+		    .link .ul4 .li4{margin-top:50px;}
+		    .link .ul4 .li4 span{float:left;color:gray;}
+		    .link .ul4 .li4 img{margin-right:14px;margin-top:0px;float:left;}
+		    .link .ul4 .li5{margin-top:90px;}
+		    .link .ul4 .li5 span{float:left;color:gray;}
+		    .link .ul4 .li5 img{margin-right:14px;margin-top:0px;float:left;}
+
+		    .link .ul4 .li6{margin-top:130px;}
+		    .link .ul4 .li6 img{float:left;margin-right:10px;}
+
+		    #foot{width:100%;height:98px;position:absolute;left:0;top:1556px;background:black;}
+		    #foot span{color:white;}
+		    #foot .container{width:1178px;height:98px;position:absolute;left:0;right:0;bottom:0;top:0;margin:0 auto;background:black;}
+		    #foot .container h1{float:left;margin-left:420px;margin-top:23px;color:white;}
+		    #foot .container ul{float:left;list-style:none;margin-left:30px;margin-top:17px;}
+		    #foot .a span{color:gray;}
+		    #foot .b span{color:gray;}
+		    #foot .a .span1{float:left;margin-top:12px;}
+		    #foot .a .span2{float:right;margin-top:12px;margin-right:20px;}
+		    #foot .a img{width:18px;margin-left:23px;margin-top:9px;}
+
+
+
+			/* background:yellowgreen;    background:red;   background:yellow;  */
+</style>
+<script src="js/jquery-3.3.1.js"></script> 
+</head>
+<body>
+<div id="header">
+		<div class="a">
+			<ul>
+				<li><a href="./shujulu/login.html"><span>登录</span></a></li>
+				<li><a href="./shujulu/login.html"><span>注册</span></a></li>
+				<li><a href="#"><span>我的账户</span></a></li>
+				<li><a href="#"><img src="images/1.gif"/><span>我的收藏</span></a></li>
+			    <li style="border-right:0;"><a href="#"><img src="images/2.gif" style="margin-top:1px;"/><span>购物袋</span><span class="car">[0]</span></a></li>
+		    </ul>
+		</div>
+		<h1><a href="#">TRENDIANO</a></h1>
+		<div class="b">
+			<form method="get" action="#">
+				<input class="input1" type="text" value="搜索你感兴趣的内容"/>
+				<input class="input2" type="image" src="images/3.gif" value=""/>
+		    </form>
+		</div>
+		<div class="c">
+			<ul>
+				<li><a href="#"><span>首页</span></a></li>
+				<li><a href="#"><span>品牌动向</span></a></li>
+				<li><a href="#"><span>新品资讯</span></a></li>
+				<li class="m1"><a href="#"><span>全部新品</span></a></li>
+				<li><a href="#"><span>三大系列</span></a></li>			
+				<li><a href="#"><span>T恤/POLO衫</span></a></li>
+				<li><a href="#"><span>衬衫</span></a></li>
+				<li><a href="#"><span>裤装</span></a></li>
+				<li><a href="#"><span>卫衣</span></a></li>
+				<li><a href="#"><span>薄外套</span></a></li>
+				<li><a href="#"><span>保暖外套</span></a></li>
+				<li><a href="#"><span>配饰</span></a></li>
+			</ul>
+			<span class="time">营业时间：9:00-18:00</span>
+		</div>
+	</div>
+
+	<div id="header1">
+			<div class="a">
+				<h3>NEW IN</h3>
+			</div>
+
+			<div class="b">
+				<ul class="ul1">
+					<li><a href="#"><span>4月27号到店</span></a></li>
+					<li><a href="#"><span>4月17号到店</span></a></li>
+					<li><a href="#"><span>3月29号到店</span></a></li>
+					<li><a href="#"><span>3月22号到店</span></a></li>
+				</ul>
+
+				<ul class="ul2">
+					<li><a href="#"><span>3月8号到店</span></a></li>
+					<li><a href="#"><span>2月新品合集</span></a></li>
+					<li><a href="#"><span>全部新品</span></a></li>
+				</ul>
+			</div>
+	</div>
+
+	<div id="tiao">
+		<div class="tiao">
+			<a href="#"><img src="./images/4.gif"/></a>
+			<span>> 印花中长宽松短袖衬衫</span>
+		</div>
+	</div>
+	
+	<div id="main">
+		<div id="container">
+			<div class="container1">
+				<div class="left">
+					<div class="small">
+						<div class="wrap">
+						</div>
+						<img src="./images/fdj.jpg" class="opacity-img" alt="">
+						<span class="grayBox"></span>
+					</div>
+					<div class="big">
+						<img src="./images/fdj.jpg" alt="">
+					</div>					
+				</div>
+				<div class="right">
+					<h3>TRENDIANO</h3>
+					<div class="a"><h3>印花中长宽松短袖衬衫</h3><span>3GE2010080090</span></div>
+					<p class="p1">￥599</p>
+					<p class="p2"><span class="span1">颜色</span><span class="span2"></span></p>
+					<p class="p3"><span class="span">尺码:</span><span>S</span><span>M</span><span>L</span><span>xL</span><img src="./images/chima.jpg"/></p>
+					<p class="p4"><a class="a1" href=""><span>一键购买</span></a> <a class="a2" href=""><img class="img1" src="./images/5.gif"/><span>加入收藏</span></a> <a class="a3" href=""><img src="./images/6.gif"/><span>联系客服</span></a></p>
+					<p class="p5"><span>单笔消费满95元免邮</span></p>
+					<button>加入购物车</button>
+					<p class="p6"><span>分享:</span><a href=""><img src="./images/7.gif"/></a> <a href=""><img src="./images/8.gif"/></a></p>
+				</div>
+			</div>
+
+			<div class="container2">
+				<div class="left">
+					<p class="p1"><span class="span1">名称</span> <span class="span2">印花中长宽松短袖衬衫</span></p>
+					<p class="p2"><span class="span1">风格</span><span class="span2">艳丽花卉不再只局限于女性，运用丰富色调将鲜花的宁静美感与男性衬衫雅致感结合，交织出别样个性；中长款长度，配合宽松版型剪裁，尽显潇洒随性气息；甄选府绸面料打造，含丰富棉成分，透气亲肤柔韧细致，穿着舒适自在；时髦单品，下装与短裤或休闲长裤搭配皆可，配入板鞋，轻松构筑闲适吸睛造型</span></p>
+					<p class="p3"><span class="span1">纤维含量小知识</span><span class="span2">产品或产品的某一部分含有2种及以上的纤维时，除了许可不标注的纤维外，在标签上标明的每一种纤维含量允许偏差为5%，填充物的允许偏差为10%</span></p>
+				</div>
+				<div class="right">
+					<p class="p1"><span class="span1">面料成分</span><span class="span2">面料:棉69.80% 聚酯纤维30.20%</span></p>
+					<p class="p2"><span class="span1">长度</span><span class="span2">中长</span></p>
+					<p class="p3"><span class="span1">版型</span><span class="span2">宽松</span></p>
+					<div class="p4">
+						<span class="span1">洗涤</span>
+						<ul class="span2">
+							<li><img src="./images/m1.jpg"/></li>
+							<li><img src="./images/m2.jpg"/></li>
+							<li><img src="./images/m3.jpg"/></li>
+							<li><img src="./images/m4.jpg"/></li>
+							<li><img src="./images/m5.jpg"/></li>
+							<li><img src="./images/m6.jpg"/></li>
+							<li class="li7"><img src="./images/m7.jpg"/></li>
+						</ul>
+					</div>
+					<p class="p5"><span>30℃以下常规机洗装饰工艺部位不可揉搓,不可熨烫请扣合好后与同类颜色衣物洗涤</span></p>
+				</div>
+			</div>
+		</div>	
+	</div>
+
+	<div id="link">
+		<div class="link">
+			<ul class="ul1">
+				<li>
+					<h4><a href="#"><span>活动日历</span></a></h4>
+					<img src="images/121.jpg"/>
+				</li>
+			</ul>
+			<ul class="ul2">
+				<li class="li1">
+					<h4><a href="#"><span>官方微信</span></a></h4>
+					<img src="images/131.jpg"/>
+				</li>
+				<li class="li2">
+					<span>关注微博</span>
+					<a href="#">
+						<img src="images/a0.jpg"/>
+					    <span>关注@TRENDIANO官方微博</span>
+					</a>
+				</li>
+			</ul>
+			<ul class="ul3">
+				<li><a href="#">
+					<span>品牌资讯</span>
+					<img src="images/141.jpg"/>
+				</a></li>
+			</ul>
+			<ul class="ul4">
+				<li class="li1"><a href="#"><span>ABOUT US</span></a></li>
+				<li class="li2"><a href="#"><span>购物流程</span><span>支付方式</span><span>退货流程</span><span>配送说明</span><span>关于我们</span></a></li>
+				<li class="li3"><a href="#"><img src="images/a1.jpg"/><span>联系客服</span></a></li>
+				<li class="li4"><a href="#"><img src="images/a2.jpg"/><span style="display:inline-block;margin-top:3px;">客服400-880-0086</span></a></li>
+				<li class="li5"><a href="#"><img src="images/a3.jpg"/><span style="display:inline-block;margin-left:7px;margin-top:3px;">7天无条件退货</span></a></li>
+				<li class="li6"><a href="#"><img src="images/a4.jpg"/><img src="images/a5.jpg"/></a></li>
+			</ul>
+		</div>
+	</div>
+
+	<div id="foot">
+		<div class="container">
+			<h1>TRENDIANO</h1>
+			<ul>
+				<li><a href="#"><span>隐私申明</span>&nbsp;<span>联系我们</span></a></li>
+				<li class="b"><span>copyRight @ 2010-2018 广州赫基信息科技有限公司版权所有</span></li>
+				<li class="a"><span class="span1">粤ICP备10229258号-4</span><img src="./images/s1.jpg"/><span class="span2">粤公网安备440138128712号</span></li>
+			</ul>
+		</div>
+	</div>
+ 
+	<script>		
+		$(".m1").mouseover(function(){
+            
+			$("#header1").stop().fadeIn(2000)
+		})
+
+		$(".m1").mouseout(function(){
+			$("#header1").stop().fadeOut(2000)
+		})
+
+		$("#header1").mouseover(function(){
+			$("#header1").stop().fadeIn(2000)
+		})
+
+		$("#header1").mouseout(function(){
+			$("#header1").stop().fadeOut(2000)
+		})
+	</script>
+
+	<script src="js/fdj.js"></script> 
+
+</body>
+</html>
