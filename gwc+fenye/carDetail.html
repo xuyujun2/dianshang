@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="../js/jquery-3.3.1.js"></script> 
+	<!-- <link rel="stylesheet" href="style/carDetail.css"> -->
+</head>
+<body>
+    <!--购物车详情页-->
+	<header>
+		购物车
+	</header>
+	<div class="container">
+		<ul id="list2"> <!--购物车详情页中的每一项，一整个横排-->
+			<!--
+				<li class="item">  //购物车详情页中的每一项，一整个横排
+
+					详情区域
+					<div class="msg">
+						<img src="https://img3.doubanio.com/view/photo/s_ratio_poster/public/p480747492.webp" alt="">
+						<h5>肖申克的救赎</h5>
+					</div>
+
+					用户操作区域
+					<div class="operation">
+							<button>-</button>
+							<input type="text" value="10">
+							<button>+</button>
+					</div>
+					<a href="#javascript" class="delete">删除</a>
+				</li>
+			-->
+		</ul>
+	</div>
+	
+	<!-- <script>
+		
+		//给list 添加一个点击事件;
+        var oList = document.querySelectorAll("#list2");
+		var aA = document.querySelectorAll(".delete");
+		oList.onclick = delegation(aA,removeCar);
+		function removeCar(){
+			var isRemove = confirm("确认删除该商品？");
+			
+			if(!isRemove) return 0;//如果!isRemove，则终止删除操作
+
+			var goodsId = this.parentNode.getAttribute("data-id");
+
+			var carListString = getCookie("carList");
+			var carListArray = JSON.parse(carListString);
+			
+			for(var i = 0 ; i < carListArray.length ; i++){
+				if(goodsId == carListArray[i].id){ //如果li的data-id等于数据的id(cookie值的id)
+					carListArray.splice(i,1); //则删除这条数据
+					break;
+				}
+			}
+			
+			//把操作好的数据(删除某项后的数据)作为cookie值设置cookie，设置好cookie后，就可以在别的地方获取最新的cookie
+			carListString = JSON.stringify(carListArray);
+			setCookie("carList",carListString);
+
+			location.reload();//每次点击删除按钮时，重新加载一下页面
+		}			
+	</script> -->
+
+    <script src="src/libs/require.js"></script>
+
+	<script>
+
+		require(["./src/libs/require.config","../js/jquery.cookie.js"],function(){
+			require(["index"])
+		})
+</script>
+</body>
+</html>
